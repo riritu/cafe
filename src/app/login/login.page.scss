@@ -1,0 +1,47 @@
+
+ion-content.login{
+    --background: url(../../assets/LOGIN.png) no-repeat center top;
+  }
+
+ion-label {
+  font-size: larger;
+  font-weight: bold
+}
+
+ion-input {
+  outline: none;
+  text-align: center;
+  color: #000000;
+  font-size: larger;
+  font-weight: bold;
+  border-radius: 15px;
+  border: 1px solid #000;
+  background: #FFF; 
+  
+}
+ion-grid.inp {
+    position: absolute;
+    top: 60%;
+    width: 100%;
+    
+}
+ion-button {
+    padding: 3.3px;
+    font-family: 'League Spartan', sans-serif;
+    color: #FFFCFC;
+    font-weight: 700;
+    word-wrap: break-word;   
+    font-size: 1.5rem;
+    color: #ffffff;
+    --border-radius: 22px;
+    --background: #301B09;
+    --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+ion-button.log:hover {
+  --background:#000;
+}
+
+
+

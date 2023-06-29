@@ -1,0 +1,7 @@
+{
+  "name": "trilc_smurf",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
