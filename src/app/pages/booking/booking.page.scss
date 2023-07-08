@@ -1,0 +1,122 @@
+
+ion-segment {
+    margin: 0 auto 0%;
+    width: 240px;
+    height: 35px;
+    flex-shrink: 0; 
+    --background: #266A06;
+}
+
+ion-segment-button {
+    font-weight: bold;
+}
+ion-content {
+    --background: #F2F2F2 ;
+    
+}   
+
+ion-img {
+    --background: lightgray;
+}
+
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+li {
+    padding: 2%;
+}
+
+ion-input {
+    height: 3%;
+    --padding-end: 15%;
+    --padding-start: 15%;
+    --border-radius: 4rem;
+    --background: #ffffff;
+}
+
+ion-col {
+    margin: auto;
+}
+
+.log {
+    color: #000;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal; 
+    margin-top: 2%;
+    margin-left: 17.9%;
+    width: 15rem;
+    height: 4rem;
+    flex-shrink: 0; 
+    border: 0.7rem solid #301B09 !important;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    background: 
+        var(--_g) calc(var(--_p,0%) - 100%) 0%,
+        var(--_g) calc(200% - var(--_p,0%)) 0%,
+        var(--_g) calc(var(--_p,0%) - 100%) 100%,
+        var(--_g) calc(200% - var(--_p,0%)) 100%;
+}
+/* ion-content.form{
+    --background:#F2F2F2;
+}
+
+ion-segment{
+    --background: #ffffff;
+    width: 90%;
+    margin-left: 5%;
+}
+
+ion-label{
+    font-size: larger;
+    font-weight: bold;
+}
+
+ion-input{
+    outline: none;
+    text-align: center;
+    color: #000000;
+    font-size: larger;
+    font-weight: bold;
+    border-radius: 15px;
+    border: 1px solid #000;
+    background: #FFF;
+}
+
+ion-grid.in {
+    position: absolute;
+    top:35%;
+    width: 100%;
+}
+  
+ion-button {
+    padding: 3.3px;
+    font-family: 'League Spartan', sans-serif;
+    color: #FFFCFC;
+    font-weight: 700;
+    word-wrap: break-word;   
+    font-size: 1.5rem;
+    color: #ffffff;
+    --border-radius: 22px;
+    --background: #301B09;
+    --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+    transition: background-color 0.3s ease; 
+}
+  
+ion-button.log:hover {
+  --background:#000;
+}
+
+ion-toast {
+  align-content: center;
+  --background: var(--ion-color-danger);
+  --color: var(--ion-color-light);
+}
+  
+ion-toast .toast-message {
+  --color: red !important; 
+  
+}
+  
+ */ 

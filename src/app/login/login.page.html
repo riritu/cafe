@@ -3,21 +3,21 @@
     <ion-row>
       <ion-col size="8" offset="2">
         <ion-label>Username</ion-label>
-        <ion-input></ion-input>
-      </ion-col>
+        <ion-input [(ngModel)]="username" required></ion-input>     
+       </ion-col>
     </ion-row>
     <br>  
     <ion-row>
       <ion-col size="8" offset="2">
         <ion-label>Password</ion-label>
-       <ion-input></ion-input>
-      </ion-col>
+        <ion-input [(ngModel)]="password" type="password" required></ion-input>     
+       </ion-col>
     </ion-row>
     <br>
     <br>
     <ion-row>
-      <ion-col size="2"offset="4.3" offset-md="3">
-        <ion-button fill="none" class="log">LOG IN</ion-button>
+      <ion-col size="2"offset="4.3" offset-md="4">
+        <ion-button class="log" fill="none" (click)="login()">LOG IN</ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>
