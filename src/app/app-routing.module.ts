@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'homer',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -32,9 +32,14 @@ const routes: Routes = [
     loadChildren: () => import('./adminpage/requests/requests.module').then( m => m.RequestsPageModule)
   },
   {
+    path: 'booking',
+    loadChildren: () => import('./pages/booking/booking.module').then( m => m.BookingPageModule)
+  },
+  {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   }
+  
  
 ];
 

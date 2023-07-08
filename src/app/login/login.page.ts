@@ -18,19 +18,18 @@ export class LoginPage  {
       // Successful login
       console.log('Login successful');
       // Redirect to another page
-      this.navCtrl.navigateForward('/dashboard');
+      this.navCtrl.navigateForward('/homer/home');
     } else {
       // Invalid login
       const toast = await this.toastController.create({
-        message: 'Invalid credentials',
+        message: 'Invalid credentials!',
         duration: 10000, // Duration in milliseconds
         color: 'danger', // Optional color for the toast
         position: 'top', // Position of the toast on the screen (top, bottom, or middle)
       });
       toast.present();
     }
-  }
-  
+  } 
 }
 
 
