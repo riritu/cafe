@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-requests',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RequestsPage implements OnInit {
 
-  constructor() { }
+
+  constructor(private navCtrl: NavController) { }
 
   ngOnInit() {
   }
-
+  
+  clickBack () {
+    this.navCtrl.back();
+  }
+  
 }
