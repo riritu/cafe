@@ -42,7 +42,11 @@ const routes: Routes = [
  {
     path: 'con',
     loadChildren: () => import('./con/con.module').then( m => m.ConPageModule)
+  },  {
+    path: 'tenant',
+    loadChildren: () => import('./tenant/tenant.module').then( m => m.TenantPageModule)
   }
+
 
  
 ];
