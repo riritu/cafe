@@ -1,7 +1,7 @@
 <ion-card class="sige">
-  <img src="assets/pink.png" class="pink" />
+  <img src="assets/CU.png" class="pink" />
   <ion-card-header>
-    <ion-card-title>Model 2</ion-card-title>
+    <ion-card-title>{{modelDetails[0].modelName}}</ion-card-title>
     
   </ion-card-header>
 
@@ -15,11 +15,11 @@
     <ion-card-subtitle>MORE PHOTOS</ion-card-subtitle>
   </ion-card-header>
   <ion-card-content class="pics">
-    <img src="assets/ab1 (1).png" class="bed" />
-    <img src="assets/ab1 (2).png" class="bid" />
-    <img src="assets/ab1 (3).png" class="sala" />
-    <img src="assets/ab1 (4).png" class="eat" />
-    <img src="assets/ab1 (5).png" class="laba" />
-    <img src="assets/ab1 (6).png" class="hall" />
+    <img src="{{modelDetails[0].modelimg1}}" class="bed" />
+    <img src="{{modelDetails[0].modelimg2}}" class="bid" />
+    <img src="{{modelDetails[0].modelimg3}}" class="sala" />
+    <img src="{{modelDetails[0].modelimg4}}" class="eat" />
+    <img src="{{modelDetails[0].modelimg5}}" class="laba" />
+    <img src="{{modelDetails[0].modelimg6}}" class="hall" />
   </ion-card-content>
 </ion-card>

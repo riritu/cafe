@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./unitabout.page.scss'],
 })
 export class UnitaboutPage implements OnInit {
-
+  modelDetails: any[] = [];
   constructor() { }
 
   ngOnInit() {
+    const storedData = localStorage.getItem("units"); 
+    if (storedData) {
+      this.modelDetails = JSON.parse(storedData);
+    }
+    console.log(this.modelDetails)
   }
 
 }

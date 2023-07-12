@@ -40,6 +40,10 @@ const routes: Routes = [
     loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
   },
   {
+    path: 'unitabout',
+    loadChildren: () => import('./pages/unitabout/unitabout.module').then( m => m.UnitaboutPageModule)
+  },
+  {
     path: 'tenant',
     loadChildren: () => import('./tenant/tenant.module').then( m => m.TenantPageModule)
   }
