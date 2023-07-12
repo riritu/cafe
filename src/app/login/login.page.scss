@@ -11,7 +11,7 @@ font-weight: bold;
 ion-input {
 outline: none;
 text-align: center;
-color: #000000;
+color: #000;
 font-size: larger;
 font-weight: bold;
 border-radius: 15px;
@@ -54,5 +54,7 @@ ion-toast .toast-message {
 
 }
 
-
+ion-col.login {
+  margin: auto;
+}
 

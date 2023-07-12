@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'homer',
     pathMatch: 'full'
   },
   {
@@ -32,18 +32,19 @@ const routes: Routes = [
     loadChildren: () => import('./adminpage/requests/requests.module').then( m => m.RequestsPageModule)
   },
   {
-    path: 'booking',
-    loadChildren: () => import('./pages/booking/booking.module').then( m => m.BookingPageModule)
-  },
-  {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
   {
-    path: 'unitabout',
-    loadChildren: () => import('./pages/unitabout/unitabout.module').then( m => m.UnitaboutPageModule)
+    path: 'dashboard',
+    loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
+  },
+  {
+    path: 'tenant',
+    loadChildren: () => import('./tenant/tenant.module').then( m => m.TenantPageModule)
   }
-  
+
+
  
 ];
 
