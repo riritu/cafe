@@ -2,12 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-requests',
-  templateUrl: './requests.page.html',
-  styleUrls: ['./requests.page.scss'],
+  selector: 'app-booking',
+  templateUrl: './booking.page.html',
+  styleUrls: ['./booking.page.scss'],
 })
-export class RequestsPage implements OnInit {
-
+export class BookingPage implements OnInit {
 
   constructor(private navCtrl: NavController) { }
 
@@ -19,3 +18,4 @@ export class RequestsPage implements OnInit {
   }
   
 }
+

@@ -5,13 +5,13 @@ ion-content.login{
 
 ion-label {
 font-size: larger;
-font-weight: bold
+font-weight: bold;
 }
 
 ion-input {
 outline: none;
 text-align: center;
-color: #000000;
+color: #000;
 font-size: larger;
 font-weight: bold;
 border-radius: 15px;
@@ -50,9 +50,11 @@ align-content: center;
 }
 
 ion-toast .toast-message {
---color: red !important; 
+--color: red; 
 
 }
 
-
+ion-col.login {
+  margin: auto;
+}
 

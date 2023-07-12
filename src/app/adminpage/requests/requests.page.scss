@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ion-icon.person {
   font-size: 10rem;
@@ -40,4 +41,51 @@ ion-icon.person {
   width: 100%;
   height: 0.2rem;
   background-image: repeating-linear-gradient(90deg, green, white, green 81%);
+=======
+ion-content {
+  
+}
+
+ion-icon.person {
+  font-size: 10rem;
+  color: black;
+}
+
+
+.card-container {
+  margin: auto;
+  margin-top: 24%;
+  background: 
+    var(--_g) calc(var(--_p,0%) - 100%) 0%,
+    var(--_g) calc(200% - var(--_p,0%)) 0%,
+    var(--_g) calc(var(--_p,0%) - 100%) 100%,
+    var(--_g) calc(200% - var(--_p,0%)) 100%;
+  height: 70%;
+  width: 80%;
+  border-top: 0;
+  border-left: 0.2rem#266A06;
+  border-right: 0.2rem#266A06;
+  border-bottom: 0.2rem#266A06;
+  border-style: solid;
+  
+}
+
+.card-overlay {
+    overflow: hidden;
+    position: absolute;
+    top: 3rem;
+    left: 33%;/* Adjust this value to control the distance from the left */
+    z-index: 1;
+    height: 12.5rem;
+    width: 12.5rem;
+    border-radius: 50%;
+    border: #266A06 0.2rem solid;
+    text-align: center;
+}
+
+.top {
+  width: 100%;
+  height: 0.2rem;
+  background-image: repeating-linear-gradient(90deg, green, white, green 81%);
+>>>>>>> 823cc78ad03116433c8f67403c685f266113e7a1
 }
