@@ -1,7 +1,33 @@
 <ion-content class="bg no-scroll">
  <div class="bgtop">
-    <img src="../assets/LOGINnga.png" alt="">
+    <img src="../assets/head.png" alt="">
  </div>
-
-  
+ <div class="cont">
+   <img src="../assets/conn.png" alt="">
+</div>
+<ion-grid>
+   <ion-row>
+     <ion-col size="8.5">
+       <ul>
+         <li>
+             <input type="hidden" id="unik" value="generateRandomId()">
+             <ion-input placeholder="Name" name="ngalan" id="name"></ion-input>
+           </li>
+         <li>
+           <ion-input type="email" placeholder="Email"></ion-input> 
+         </li>
+         <li>
+           <ion-input placeholder="Phone Number" type="tel"></ion-input>
+         </li>
+         <li>
+           <ion-input placeholder="House Unit" name="bahay" id="house"></ion-input>
+         </li>
+         <li>
+           <ion-input placeholder="Comments" type="comms" class="hi"></ion-input>
+         </li>         
+       </ul>
+       <button class="log">SUBMIT</button>       
+     </ion-col>
+   </ion-row>
+ </ion-grid>
 </ion-content>

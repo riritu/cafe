@@ -1,18 +1,30 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-button fill="none" (click)="clickBack()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button><span>    <ion-title>Requests</ion-title>
-    </span>
-  </ion-toolbar>
-</ion-header>
 <ion-content>
-  <div class="card-container">
-    <div class="top"></div>
-    <div class="card-overlay">
-      <ion-icon name="person" class="person"></ion-icon>
-    </div>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Requests</ion-title>
+  </ion-toolbar>
+    <div class="card-container">
     
-  </div>
+      <div class="card-overlay">
+        <ion-icon name="person" class="person"></ion-icon>
+      </div>
+      <div class="deets">
+        <img src="../assets/john.png" alt="">
+      </div>
+      <div>
+        <ion-row>
+          <ion-col offset="2">
+            <ion-button fill="none" class="log" >Decline</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button fill="none" class="lag">Approve</ion-button>
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+
+
 </ion-content>
-
-
 

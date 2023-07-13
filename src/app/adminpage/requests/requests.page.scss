@@ -1,35 +1,34 @@
-ion-content {
-  
-}
 
 ion-icon.person {
   font-size: 10rem;
   color: black;
+  margin-top: 3%;
 }
 
 
 .card-container {
   margin: auto;
-  margin-top: 24%;
+  margin-top: 28%;
   background: 
     var(--_g) calc(var(--_p,0%) - 100%) 0%,
     var(--_g) calc(200% - var(--_p,0%)) 0%,
     var(--_g) calc(var(--_p,0%) - 100%) 100%,
     var(--_g) calc(200% - var(--_p,0%)) 100%;
-  height: 70%;
+  height: 75%;
   width: 80%;
-  border-top: 0;
+  border-radius: 2%;
+  border-top: 0.2rem#266A06;
   border-left: 0.2rem#266A06;
   border-right: 0.2rem#266A06;
   border-bottom: 0.2rem#266A06;
   border-style: solid;
-  
+
 }
 
 .card-overlay {
     overflow: hidden;
     position: absolute;
-    top: 3rem;
+    top: 11.5%;
     left: 33%;/* Adjust this value to control the distance from the left */
     z-index: 1;
     height: 12.5rem;
@@ -37,10 +36,66 @@ ion-icon.person {
     border-radius: 50%;
     border: #266A06 0.2rem solid;
     text-align: center;
+    background-color: #ffffff;
+}
+.log{
+  padding: 4px;
+  --background: #dcdada;
+  --border-radius: 22px;
+  --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+  font-family: 'League Spartan', sans-serif;
+  font-size: 1.5rem;
+  color: #000000;
+  font-weight: 700;
+  word-wrap: break-word;   
+  transition: background-color 0.3s ease;
+}
+
+.lag {
+  padding: 4px;
+  font-family: 'League Spartan', sans-serif;
+  color: #FFFCFC;
+  font-weight: 700;
+  word-wrap: break-word;   
+  font-size: 1.5rem;
+  color: #ffffff;
+  --border-radius: 22px;
+  --background: #301B09;
+  --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+  transition: background-color 0.3s ease;
+}
+ion-row {
+  margin-top: 35%;
+  margin-right: 9%;
 }
 
 .top {
   width: 100%;
   height: 0.2rem;
   background-image: repeating-linear-gradient(90deg, green, white, green 81%);
+}
+
+ion-title {
+  text-align: center;
+}
+
+ion-button:hover {
+--background:#78C1F3;
+}
+
+ion-toast {
+align-content: center;
+--background: var(--ion-color-danger);
+--color: var(--ion-color-light);
+}
+
+ion-toast .toast-message {
+--color: red !important; 
+}
+
+.deets {
+  margin-top: 20%;
+  width: 80%;
+  height: 50%;
+  margin-left: 10%;
 }
