@@ -61,3 +61,38 @@ ion-toast .toast-message {
 --color: red !important; 
 
 }
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+li {
+  padding: 2%;
+}
+
+ion-input {
+  height: 0.1vw;
+  --padding-end: 15%;
+  --padding-start: 15%;
+  --border-radius: 4rem;
+  --background: #ffffff;
+}
+
+.log {
+  color: #000;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal; 
+  margin-top: 6%;
+  width: 15rem;
+  height: 4rem;
+  flex-shrink: 0; 
+  border: 0.7rem solid #301B09 !important;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  background: 
+      var(--_g) calc(var(--_p,0%) - 100%) 0%,
+      var(--_g) calc(200% - var(--_p,0%)) 0%,
+      var(--_g) calc(var(--_p,0%) - 100%) 100%,
+      var(--_g) calc(200% - var(--_p,0%)) 100%;
+}
