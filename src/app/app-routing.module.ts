@@ -8,12 +8,16 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'homer/home',
     pathMatch: 'full'
   },
   {
     path: 'gallery',
     loadChildren: () => import('./pages/gallery/gallery.module').then( m => m.GalleryPageModule)
+  },
+  {
+    path: 'payment',
+    loadChildren: () => import('./adminpage/payment/payment.module').then( m => m.PaymentPageModule)
   },
   {
     path: 'contacts',
@@ -32,18 +36,25 @@ const routes: Routes = [
     loadChildren: () => import('./adminpage/requests/requests.module').then( m => m.RequestsPageModule)
   },
   {
-    path: 'booking',
-    loadChildren: () => import('./pages/booking/booking.module').then( m => m.BookingPageModule)
-  },
-  {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
   {
+    path: 'dashboard',
+    loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
+  },
+  {
     path: 'unitabout',
     loadChildren: () => import('./pages/unitabout/unitabout.module').then( m => m.UnitaboutPageModule)
+  },
+  {
+    path: 'tenant',
+    loadChildren: () => import('./tenant/tenant.module').then( m => m.TenantPageModule)
+  },
+  {
+    path: 'route',
+    loadChildren: () => import('./adminpage/route/route.module').then( m => m.RoutePageModule)
   }
-  
  
 ];
 

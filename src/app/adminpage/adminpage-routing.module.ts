@@ -7,6 +7,18 @@ const routes: Routes = [
   {
     path: '',
     component: AdminpagePage
+  },
+  {
+    path: 'route',
+    loadChildren: () => import('./route/route.module').then( m => m.RoutePageModule)
+  },
+  {
+    path: 'account',
+    loadChildren: () => import('./account/account.module').then( m => m.AccountPageModule)
+  },
+  {
+    path: 'payment',
+    loadChildren: () => import('./payment/payment.module').then( m => m.PaymentPageModule)
   }
 ];
 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-unitabout',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./unitabout.page.scss'],
 })
 export class UnitaboutPage implements OnInit {
+  modelDetails: any;
 
-  constructor() { }
+  constructor(private navCtrl: NavController, private route: ActivatedRoute) {}
 
   ngOnInit() {
+    this.modelDetails = history.state.modelDetails;
   }
-
 }
+ 

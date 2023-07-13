@@ -19,6 +19,12 @@ export class LoginPage  {
       console.log('Login successful');
       // Redirect to another page
       this.navCtrl.navigateForward('/homer/home');
+    }
+    else if (this.username === 'tenant' && this.password === 'password') {
+      // Successful login
+      console.log('Login successful');
+      // Redirect to another page
+      this.navCtrl.navigateForward('/route/dahboard');
     } else {
       // Invalid login
       const toast = await this.toastController.create({
