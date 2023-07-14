@@ -1,12 +1,11 @@
-<ion-content>
+<ion-content class="haha">
   <ion-toolbar>
-    <ion-button fill="none" (click)="clickBack()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button><span>   
-       <ion-title>Requests</ion-title>
-    </span>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#" (click)="clickBack()"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Requests</ion-title>
   </ion-toolbar>
-<ion-content>
   <div class="card-container">
-    <div class="top"></div>
     <div class="card-overlay">
       <ion-icon name="person" class="person"></ion-icon>
     </div>
