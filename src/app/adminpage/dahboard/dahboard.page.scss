@@ -1,111 +1,47 @@
-ion-content.gallery {
-    font-family: 'League Spartan', sans-serif;
-    --background: #F2F2F2;
+.gallery{
+    --background:#f2f2f2;
 }
 
 img.imgs {
-   border-radius: 8px;
-  }
-
-ion-card-content {
-    font-family: 'League Spartan', sans-serif;
-    padding: 0rem;
+    border-radius: 3px;
 }
 
-ion-card-header {
+ion-card-header{
     padding-left: 0;
     padding-top: 1rem;
     padding-bottom: 0.4rem;
 }
 
-ion-col {
-    padding-bottom: 0;
-}
-
-ion-col.detail {
-    padding-left: 1.5rem;
-}
-
-ion-card-title.top_title {
-    font-family: 'League Spartan', sans-serif;
+ion-card-title.toptitle{
+    font-family: 'League Spartan',sans-serif;
     font-weight: bold;
+    font-size: large;
+    color: rgb(54, 41, 41);
+}
+
+.tn{
+    color:rgb(54, 41, 41);
+    font-size: x-large;
+    margin-left: 5%;
+    margin-bottom:2%;
+}
+
+ion-card-content{
+    font-family: 'League Spartan'
+}
+
+.money{
+    font-size:medium;
+}
+
+.slot{
     font-size: large;
 }
 
-
-ion-title {
-    margin-top: 1rem;
-    background-color: #f1f1f1;;
-    font-family: 'League Spartan', sans-serif;
-    text-transform:uppercase;
-    font-size: 2.1rem;
-    text-align: center;
-    color: #352414;
-
+.second{
+    bottom: 2%;
 }
 
-ion-toolbar {
-    --border-color: #f1f1f1;
+.h3{
+    bottom:1%;
 }
-
-.money {
-    font-size:1.4rem;
-
-}
-
-.blue{
- --margin:0 !important;
- bottom: 8%;
-}
-
-.lot {
- --margin:0 !important;
- bottom: 5%;
-}
-.tn {
-    position: absolute; 
-    top: 45% ;
-    color: rgb(54, 41, 41);
-    margin-left: 5%;
-    font-size: x-large;
-}
-
-.pay{
- width:150%;
- margin-right:60%;
- margin-left: 0%;
- margin-bottom: 30%;
-
-}
-
-.req {
-    position: absolute; 
-    top: 65% ;
-    color: rgb(54, 41, 41);
-    margin-left: 5%;
-    font-size: x-large;
-}
-
-.book{
-    bottom:4%;
-    width:145%;
-    margin-right:60%;
-    margin-left: 0%;
-}
-
-ion-button {
-    padding: 3.3px;
-    font-family: 'League Spartan', sans-serif;
-    color: #FFFCFC;
-    font-weight: 700;
-    word-wrap: break-word;   
-    font-size: 1.5rem;
-    color: #ffffff;
-    --border-radius: 22px;
-    --background: #301B09;
-    --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
-    transition: background-color 0.3s ease;
-    margin-top: 34%;
-    margin-left: 72%;
-}
-  

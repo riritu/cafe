@@ -54,7 +54,23 @@ const routes: Routes = [
   {
     path: 'route',
     loadChildren: () => import('./adminpage/route/route.module').then( m => m.RoutePageModule)
+  },  {
+    path: 'modelthree',
+    loadChildren: () => import('./modelthree/modelthree.module').then( m => m.ModelthreePageModule)
+  },
+  {
+    path: 'modelfour',
+    loadChildren: () => import('./modelfour/modelfour.module').then( m => m.ModelfourPageModule)
+  },
+  {
+    path: 'modelone',
+    loadChildren: () => import('./modelone/modelone.module').then( m => m.ModelonePageModule)
+  },
+  {
+    path: 'modeltwo',
+    loadChildren: () => import('./modeltwo/modeltwo.module').then( m => m.ModeltwoPageModule)
   }
+
  
 ];
 
