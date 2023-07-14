@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ModeltwoPageRoutingModule } from './modeltwo-routing.module';
+import { ReqdetailsPageRoutingModule } from './reqdetails-routing.module';
 
-import { ModeltwoPage } from './modeltwo.page';
+import { ReqdetailsPage } from './reqdetails.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ModeltwoPageRoutingModule
+    ReqdetailsPageRoutingModule
   ],
-  declarations: [ModeltwoPage]
+  declarations: [ReqdetailsPage]
 })
-export class ModeltwoPageModule {}
+export class ReqdetailsPageModule {}

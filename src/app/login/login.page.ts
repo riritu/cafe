@@ -14,13 +14,13 @@ export class LoginPage  {
   constructor(private navCtrl: NavController, private toastController: ToastController) {}
   async login() {
     // Perform validation logic here
-    if (this.username === 'admin' && this.password === 'password') {
+    if (this.username === 'tenant' && this.password === 'password') {
       // Successful login
       console.log('Login successful');
       // Redirect to another page
       this.navCtrl.navigateForward('/homer/home');
     }
-    else if (this.username === 'tenant' && this.password === 'password') {
+    else if (this.username === 'admin' && this.password === 'password') {
       // Successful login
       console.log('Login successful');
       // Redirect to another page

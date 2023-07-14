@@ -8,10 +8,14 @@ import { NavController } from '@ionic/angular';
 })
 export class RequestsPage implements OnInit {
 
-
+  formDataList: any;
   constructor(private navCtrl: NavController) { }
 
   ngOnInit() {
+    const storedFormData = localStorage.getItem('formentry');
+    if (storedFormData) {
+      this.formDataList = JSON.parse(storedFormData);
+    }
   }
   
   clickBack () {

@@ -40,10 +40,6 @@ const routes: Routes = [
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
   {
-    path: 'dashboard',
-    loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
-  },
-  {
     path: 'unitabout',
     loadChildren: () => import('./pages/unitabout/unitabout.module').then( m => m.UnitaboutPageModule)
   },
@@ -52,28 +48,18 @@ const routes: Routes = [
     loadChildren: () => import('./tenant/tenant.module').then( m => m.TenantPageModule)
   },
   {
+    path: 'booking',
+    loadChildren: () => import('./pages/booking/booking.module').then( m => m.BookingPageModule)
+  },
+  {
     path: 'route',
     loadChildren: () => import('./adminpage/route/route.module').then( m => m.RoutePageModule)
-  },  {
-    path: 'modelthree',
-    loadChildren: () => import('./modelthree/modelthree.module').then( m => m.ModelthreePageModule)
   },
   {
-    path: 'modelfour',
-    loadChildren: () => import('./modelfour/modelfour.module').then( m => m.ModelfourPageModule)
-  },
-  {
-    path: 'modelone',
-    loadChildren: () => import('./modelone/modelone.module').then( m => m.ModelonePageModule)
-  },
-  {
-    path: 'modeltwo',
-    loadChildren: () => import('./modeltwo/modeltwo.module').then( m => m.ModeltwoPageModule)
+    path: 'reqdetails',
+    loadChildren: () => import('./adminpage/reqdetails/reqdetails.module').then( m => m.ReqdetailsPageModule)
   }
-
- 
 ];
-
 
 @NgModule({
   imports: [

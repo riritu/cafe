@@ -1,29 +1,27 @@
-<ion-content class="haha">
+<ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button default-href="#" (click)="clickBack()"></ion-back-button>
-    </ion-buttons>
     <ion-title>Requests</ion-title>
   </ion-toolbar>
-  <div class="card-container">
-    <div class="card-overlay">
-      <ion-icon name="person" class="person"></ion-icon>
-    </div>
-    <div class="deets">
-      <img src="../assets/john.png">  
-   </div>
-    <div>
-      <ion-row>
-        <ion-col offset="2">
-          <ion-button fill="none" class="log">Decline</ion-button>
-        </ion-col>
-        <ion-col>
-          <ion-button fill="none" class="lag">Approve</ion-button>
-        </ion-col>
-      </ion-row>
-  </div>
-  </div>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let formData of formDataList" class="book" [routerLink]="['/reqdetails', formData.ids]">
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="auto">
+            <img src="assets/image 17.png" alt="" class="imgs">
+          </ion-col>
+          <ion-col class="detail">
+            <ion-card-header>
+              <ion-card-title>
+                <div style="font-size: 2.1rem;">{{ formData.name }}</div>
+                <div class="money">{{ formData.unit }}, {{ formData.date }}</div>
+              </ion-card-title>
+            </ion-card-header>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
-
-
-

@@ -1,22 +1,27 @@
-  <ion-card class="sige">
-    <img src="assets/orange.png" class="pink" />
+<ion-content>
+  <ion-card>
+    <img alt="Silhouette of mountains" src="{{modelDetails?.imgModel}}" />
     <ion-card-header>
-      <ion-card-title>{{ modelDetails.modelName }}</ion-card-title>
+      <ion-card-title>{{modelDetails?.modelName}}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      Pontefino Prime Residences, Batangas City
+    Pontefino Prime Residences,Batangas City
     </ion-card-content>
   </ion-card>
-  <ion-card class="up">
-    <ion-card-header class="UM">
-      <ion-card-title>MORE PHOTOS</ion-card-title>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="mmm">MORE PHOTOS</ion-card-title>
     </ion-card-header>
-    <ion-card-content class="pics">
-      <img src="assets/ab1 (1).png" class="bed" />
-      <img src="assets/ab1 (2).png" class="bid" />
-      <img src="assets/ab1 (3).png" class="sala" />
-      <img src="assets/ab1 (4).png" class="eat" />
-      <img src="assets/ab1 (5).png" class="laba" />
-      <img src="assets/ab1 (6).png" class="hall" />
-    </ion-card-content>
+    <ion-grid>
+      <ion-row>
+      <ion-col size="6" size-md="4" size-lg="2"><img src="{{modelDetails?.modelimg1}}" class="bed"/></ion-col>
+        <ion-col size="6" size-md="4" size-lg="2"><img src="{{modelDetails?.modelimg2}}" class="bid"/></ion-col>
+        <ion-col size="6" size-md="4" size-lg="2"> <img src="{{modelDetails?.modelimg3}}" class="sala"/></ion-col>
+        <ion-col size="6" size-md="4" size-lg="2"><img src="{{modelDetails?.modelimg4}}" class="eat"/></ion-col>
+        <ion-col size="6" size-md="4" size-lg="2"><img src="{{modelDetails?.modelimg5}}" class="laba"/></ion-col>
+        <ion-col size="6" size-md="4" size-lg="2"><img src="{{modelDetails?.modelimg6}}" class="hall"/></ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-card>
+</ion-content>
+  
