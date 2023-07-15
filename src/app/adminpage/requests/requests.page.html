@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-card *ngFor="let formData of formDataList" class="book" [routerLink]="['/reqdetails', formData.ids]">
+  <ion-card *ngFor="let formData of formDataList" class="book"  (click)="goToReqDetails(formData.ids)">
     <ion-card-content>
       <ion-grid>
         <ion-row>

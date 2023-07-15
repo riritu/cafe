@@ -5,11 +5,12 @@ import { ReqdetailsPage } from './reqdetails.page';
 
 const routes: Routes = [
   {
-    path: 'reqdetails/: id',
+    path: '',
     component: ReqdetailsPage
-  },
+  }
+
 ];
- 
+
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],

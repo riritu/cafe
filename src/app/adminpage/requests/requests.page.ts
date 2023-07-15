@@ -8,13 +8,14 @@ import { NavController } from '@ionic/angular';
 })
 export class RequestsPage implements OnInit {
 
-  formDataList: any;
+  formDataList: any[] = []; // Initialize formDataList as an empty array
   constructor(private navCtrl: NavController) { }
 
   ngOnInit() {
     const storedFormData = localStorage.getItem('formentry');
     if (storedFormData) {
       this.formDataList = JSON.parse(storedFormData);
+      console.log(this.formDataList);
     }
   }
   
@@ -22,4 +23,8 @@ export class RequestsPage implements OnInit {
     this.navCtrl.back();
   }
   
+  goToReqDetails(id: string) {
+    this.navCtrl.navigateForward(['/reqdetails', id]);
+  }
+
 }

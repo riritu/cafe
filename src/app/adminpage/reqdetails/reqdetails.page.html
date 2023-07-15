@@ -10,9 +10,11 @@
       <ion-icon name="person" class="person"></ion-icon>
     </div>
     <div class="deets">
-      <img src="../assets/john.png">  
-   </div>
-    <div>
+      <p>Name: {{ formDetails?.name }}</p>
+      <p>Unit: {{ formDetails?.unit }}</p>
+      <p>Ids: {{ formDetails?.ids }}</p>
+      <p>Date: {{ formDetails?.date }}</p>  
+   </div>      
       <ion-row>
         <ion-col offset="2">
           <ion-button fill="none" class="log">Decline</ion-button>
@@ -21,7 +23,6 @@
           <ion-button fill="none" class="lag">Approve</ion-button>
         </ion-col>
       </ion-row>
-  </div>
   </div>
 </ion-content>
 

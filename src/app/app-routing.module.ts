@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-
+import { ReqdetailsPage } from './adminpage/reqdetails/reqdetails.page';
 const routes: Routes = [
   {
     path: 'home',
@@ -54,6 +54,9 @@ const routes: Routes = [
   {
     path: 'route',
     loadChildren: () => import('./adminpage/route/route.module').then( m => m.RoutePageModule)
+  },
+  {
+    path: 'reqdetails/:id', component: ReqdetailsPage 
   },
   {
     path: 'reqdetails',

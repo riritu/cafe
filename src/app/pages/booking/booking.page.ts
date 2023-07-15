@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { Router } from '@angular/router';
 
-interface FormData {
+export interface FormData {
   name: string;
   unit: string;
   ids: string;
