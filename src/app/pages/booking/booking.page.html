@@ -25,10 +25,15 @@
               <ion-input placeholder="Phone Number" type="tel"></ion-input>
             </li>
             <li>
-              <ion-input placeholder="Model" name="bahay" id="house"></ion-input>
+              <ion-select label="Unit" id="house">
+                <ion-select-option value="Model 1">Model 1</ion-select-option>
+                <ion-select-option value="Model 1">Model 2</ion-select-option>
+                <ion-select-option value="Model 1">Model 3</ion-select-option>
+                <ion-select-option value="Model 1">Model 4</ion-select-option>
+              </ion-select>
             </li>
             <li>
-              <ion-input placeholder="Move-In-Date" type="date" id="date" ></ion-input>
+              <ion-input placeholder="Move-In-Date" type="date" id="date"     displayFormat="MMMM DD, YYYY"     pickerFormat="MMMM DD, YYYY"></ion-input>
             </li>
             <li>
               <ion-input placeholder="Move-Out-Date" type="date"></ion-input>

@@ -1,31 +1,36 @@
 <ion-content class="bg no-scroll">
   <div class="bgtop">
-     <img src="../assets/paymen.png" alt="" class="hos">
-       <div class="title">
-        <div>PAYMENT</div>
-      </div> 
+    <img src="../assets/paymen.png" alt="" class="hos">
+    <div class="title">
+      <div>PAYMENT</div>
+    </div> 
   </div>
   <ion-list>
-      <ion-item lines="none">
-          <ion-input  placeholder=" Name" name="bahay" id="house" type="text"></ion-input>
-      </ion-item>
-      <ion-item lines="none">
-        <ion-input  placeholder=" house Unit" name="bahay" id="house" type="text"></ion-input>
-      </ion-item>
-      <ion-item lines="none">
-        <ion-input  placeholder=" Date of Payment" name="bahay" id="house" type="text"></ion-input>
-      </ion-item>
-      <ion-item lines="none">
-        <ion-input  placeholder=" Mode of Payment" name="bahay" id="house" type="text"></ion-input>
-      </ion-item>
-      <ion-item lines="none">
-        <ion-input  placeholder=" Amount" name="bahay" id="house" type="text"></ion-input>
-      </ion-item>
-      <ion-item lines="none">
-        <ion-input  placeholder=" Reference Number" name="bahay" id="house" type="text"></ion-input>
-      </ion-item>
-      <ion-item lines="none">
-        <button>SUBMIT</button>
-      </ion-item>
+    <ion-item lines="none">
+      <ion-input placeholder ="Name" name="name" id="name" type="text"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-select placeholder ="Unit" id="house">
+        <ion-select-option value="Model 1">Model 1</ion-select-option>
+        <ion-select-option value="Model 2">Model 2</ion-select-option>
+        <ion-select-option value="Model 3">Model 3</ion-select-option>
+        <ion-select-option value="Model 4">Model 4</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-input placeholder ="Date of Payment" name="Date" id="date" type="date"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-input placeholder ="Mode of Payment" name="mop" id="mop" type="text"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-input placeholder ="Amount" name="bahay" id="prize" type="number"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-input placeholder ="Reference Number" name="bahay" id="rfn" type="text"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <button (click)="paymentSubmit($event)">SUBMIT</button>
+    </ion-item>
   </ion-list>
- </ion-content>
+</ion-content>

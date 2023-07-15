@@ -17,11 +17,10 @@
    </div>      
       <ion-row>
         <ion-col offset="2">
-          <ion-button fill="none" class="log">Decline</ion-button>
+          <ion-button fill="none" class="log" (click)="approveIt(formDetails?.ids, 'decline')">Decline</ion-button>
         </ion-col>
         <ion-col>
-          <ion-button fill="none" class="lag">Approve</ion-button>
-        </ion-col>
+          <ion-button fill="none" class="lag" (click)="approveIt(formDetails?.ids, 'approve')">Approve</ion-button>        </ion-col>
       </ion-row>
   </div>
 </ion-content>

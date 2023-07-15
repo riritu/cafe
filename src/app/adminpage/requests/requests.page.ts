@@ -1,6 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 
+export interface FormData {
+  name: string;
+  unit: string;
+  ids: string;
+  date: string;
+}
+
+
 @Component({
   selector: 'app-requests',
   templateUrl: './requests.page.html',
@@ -8,7 +16,7 @@ import { NavController } from '@ionic/angular';
 })
 export class RequestsPage implements OnInit {
 
-  formDataList: any[] = []; // Initialize formDataList as an empty array
+  formDataList: FormData[] = []; // Initialize formDataList as an empty array
   constructor(private navCtrl: NavController) { }
 
   ngOnInit() {

@@ -13,8 +13,12 @@ const routes: Routes = [
         loadChildren: () => import('../../adminpage/dahboard/dahboard.module').then( m => m.DahboardPageModule)
       },
       {
-        path: 'requests',
-        loadChildren: () => import('../../adminpage/requests/requests.module').then( m => m.RequestsPageModule)
+        path: 'account',
+        loadChildren: () => import('../../adminpage/account/account.module').then( m => m.AccountPageModule)
+      },
+      {
+        path: 'payment',
+        loadChildren: () => import('../../adminpage/payment/payment.module').then( m => m.PaymentPageModule)
       }
     ] 
   }

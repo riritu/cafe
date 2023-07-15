@@ -27,9 +27,15 @@
 
 
 ion-tab-bar {
-    --background: #ffffff;
+    --background: #ffffff;  
+    
+    ion-tab-button.tab-selected ion-icon {
+        color: #000;
+    }
     
 }
+
+
 
 /* For responsiveness across screens */
 html {
