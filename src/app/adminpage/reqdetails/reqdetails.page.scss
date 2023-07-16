@@ -27,7 +27,7 @@ ion-icon.person {
   .card-overlay {
       overflow: hidden;
       position: absolute;
-      top: 11.5%;
+      top: 10%;
       left: 33%;/* Adjust this value to control the distance from the left */
       z-index: 1;
       height: 12.5rem;
@@ -36,7 +36,7 @@ ion-icon.person {
       border: #266A06 0.2rem solid;
       text-align: center;
       background-color: #ffffff;
-      margin-bottom: 230%;
+      
   }
   
   .log{
@@ -99,9 +99,18 @@ ion-icon.person {
     height: 40%;
     margin-left: 10%;
     font-size: large;
+    padding: 5%;
+    color: #301B09;
+
+  }
+
+  .dee {
+    margin-left: 10%;
+    font-size: large;
+    padding: 5%;
   }
 
   .johnn {
-    margin-top: 35%;
-    margin-left: 23%;
+    margin-top: 20%;
+    margin-left: 23.5%;
   }
