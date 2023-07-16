@@ -9,6 +9,8 @@ export interface FormData {
   ids: string;
   date: string;
   type: string;
+  email: string;
+  pnum: string;
 }
 
 @Component({
@@ -29,6 +31,8 @@ export class BookingPage implements OnInit {
 
   async handleSubmit(event: Event) {
     event.preventDefault();
+    const emel = (document.getElementById("email") as HTMLInputElement).value;
+    const pnem = (document.getElementById("tel") as HTMLInputElement).value;
     const nem = (document.getElementById("name") as HTMLInputElement).value;
     const hos = (document.getElementById("house") as HTMLInputElement).value;
     const det = (document.getElementById("date") as HTMLInputElement).value;
@@ -48,6 +52,8 @@ export class BookingPage implements OnInit {
         unit: hos,
         ids: id,
         date: det,
+        email: emel,
+        pnum: pnem,
         type: this.selectedSegment,
       };
       this.formDataList.push(formData);

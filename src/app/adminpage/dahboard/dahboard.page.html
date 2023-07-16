@@ -56,8 +56,8 @@
               <ion-col class="detail">
                   <ion-card-header>
                     <ion-card-title>
-                      <div style="font-size:2.1rem;">{{ formDataList[0].name }}</div>
-                      <div class="money">{{ formDataList[0].unit }}, {{ formDataList[0].date }}</div>
+                      <div style="font-size:2.1rem;">{{ formDataList[0]!.name }}</div>
+                      <div class="money">{{ formDataList[0]!.unit }}, {{ formDataList[0]!.date }}</div>
                     </ion-card-title>
                   </ion-card-header> 
                </ion-col>
@@ -84,14 +84,14 @@
               <ion-col class="detail">
                   <ion-card-header>
                     <ion-card-title>
-                      <div style="font-size:2.1rem;">{{ formDataList[0].name }}</div>
-                      <div class="money">{{ formDataList[0].unit }}, {{ formDataList[0].date }}</div>
+                      <div style="font-size:2.1rem;">{{ formDataList[0]!.name }}</div>
+                      <div class="money">{{ formDataList[0]!.unit }}, {{ formDataList[0]!.date }}</div>
                     </ion-card-title>
                   </ion-card-header> 
                </ion-col>
               </ion-row>
            </ion-grid>
           </ion-card-content>
-        </ion-card>
+        </ion-card>  
   </div>
 </ion-content>
