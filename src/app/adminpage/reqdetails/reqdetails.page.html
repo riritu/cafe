@@ -9,18 +9,25 @@
     <div class="card-overlay">
       <ion-icon name="person" class="person"></ion-icon>
     </div>
-    <div class="deets">
-      <p>Name: {{ formDetails?.name }}</p>
-      <p>Unit: {{ formDetails?.unit }}</p>
-      <p>Ids: {{ formDetails?.ids }}</p>
-      <p>Date: {{ formDetails?.date }}</p>  
-   </div>      
+  <div class="johnn">
+    <img src="../assets/jd.png">
+  </div>
+    <ion-row>
+      <ion-col class="deets">
+        <p>Name {{ formDetails?.name }}</p>
+        <p>Email {{ formDetails?.unit }}</p>
+        <p>Phone Number {{ formDetails?.num }}</p>
+        <p>Selected Model {{ formDetails?.mod }}</p>  
+        <p>Date {{ formDetails?.date }}</p>  
+     </ion-col> 
+    </ion-row>
       <ion-row>
         <ion-col offset="2">
-          <ion-button fill="none" class="log" (click)="approveIt(formDetails?.ids, 'decline')">Decline</ion-button>
+          <ion-button fill="none" class="log" (cli.ck)="approveIt(formDetails?.ids, 'decline')">Decline</ion-button>
         </ion-col>
         <ion-col>
-          <ion-button fill="none" class="lag" (click)="approveIt(formDetails?.ids, 'approve')">Approve</ion-button>        </ion-col>
+          <ion-button fill="none" class="lag" (click)="approveIt(formDetails?.ids, 'approve')">Approve</ion-button>        
+        </ion-col>
       </ion-row>
   </div>
 </ion-content>
