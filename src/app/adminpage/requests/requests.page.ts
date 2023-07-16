@@ -23,7 +23,6 @@ export class RequestsPage implements OnInit {
     const storedFormData = localStorage.getItem('formentry');
     if (storedFormData) {
       this.formDataList = JSON.parse(storedFormData);
-      console.log(this.formDataList);
     }
   }
   

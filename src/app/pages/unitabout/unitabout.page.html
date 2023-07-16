@@ -1,12 +1,16 @@
 <ion-content>
   <ion-card>
-    <img alt="Silhouette of mountains" src="{{modelDetails?.imgModel}}" />
+    <div class="image-container">
+      <!-- Your icon element -->
+      <ion-icon name="chevron-back-outline" (click)="clickBack()"></ion-icon>
+      <!-- Your image element -->
+      <img alt="Silhouette of mountains" src="{{modelDetails?.imgModel}}" />
+    </div>
     <ion-card-header>
       <ion-card-title>{{modelDetails?.modelName}}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       Pontefino Prime Residences,Batangas City
-
     <!-- <ul class="icons">
       <li><ion-icon name="bed"></ion-icon>x3</li>
       <li><img src="assets/image 7.svg" alt="" class="cion">x3</li>

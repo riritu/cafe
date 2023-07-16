@@ -1,41 +1,46 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
+import { Tenant } from '../adminpage/account/account.page';
+
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
-export class LoginPage  {
+export class LoginPage implements OnInit {
   username: string = '';
   password: string = '';
 
   constructor(private navCtrl: NavController, private toastController: ToastController) {}
+
+  ngOnInit() {
+  }
+
   async login() {
-    // Perform validation logic here
-    if (this.username === 'tenant' && this.password === 'password') {
-      // Successful login
-      console.log('Login successful');
-      // Redirect to another page
-      this.navCtrl.navigateForward('/homer/home');
+    const storedFormData = localStorage.getItem('tenants');
+    if (storedFormData) {
+      const accounttList: Tenant[] = JSON.parse(storedFormData);
+      const matchedUser = accounttList.find((tenant) => tenant.user === this.username && tenant.pass === this.password);
+      if (matchedUser) {
+        // Successful login
+        console.log('Login successful');
+        // Redirect to another page
+        this.navCtrl.navigateForward('/homer/home');
+      } else {
+        // Invalid login
+        const toast = await this.toastController.create({
+          message: 'Invalid credentials!',
+          duration: 10000,
+          color: 'danger',
+          position: 'top',
+        });
+        toast.present();
+      }
     }
-    else if (this.username === 'admin' && this.password === 'password') {
-      // Successful login
-      console.log('Login successful');
-      // Redirect to another page
-      this.navCtrl.navigateForward('/route/dahboard');
-    } else {
-      // Invalid login
-      const toast = await this.toastController.create({
-        message: 'Invalid credentials!',
-        duration: 10000, // Duration in milliseconds
-        color: 'danger', // Optional color for the toast
-        position: 'top', // Position of the toast on the screen (top, bottom, or middle)
-      });
-      toast.present();
-    }
-  } 
+    
+    
+    
+  }
 }
-
-

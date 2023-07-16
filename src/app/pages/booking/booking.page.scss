@@ -3,19 +3,19 @@ ion-segment {
     margin: 0 auto 0;
     width: 240px;
     height: 35px;
-    flex-shrink: 0; 
     --background: #266A06;
 }
 
 ion-segment-button {
     font-weight: bold;
 }
+
 ion-content {
     --background: #F2F2F2 ;
-    
 }   
 
 ion-img {
+    height: 24%;
     --background: lightgray;
 }
 
@@ -29,7 +29,7 @@ li {
 }
 
 ion-input, ion-select {
-    height: 0.1vw;
+    height: 1.6vw; /* Set your desired height here */
     --padding-end: 15%;
     --padding-start: 15%;
     --border-radius: 4rem;

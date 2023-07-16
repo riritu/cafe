@@ -1,9 +1,10 @@
-<ion-header>
+<ion-content class="haha">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button fill="none" (click)="clickBack()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+    </ion-buttons>
     <ion-title>Requests</ion-title>
   </ion-toolbar>
-</ion-header>
-
 <ion-content>
   <ion-card *ngFor="let formData of formDataList" class="book"  (click)="goToReqDetails(formData.ids)">
     <ion-card-content>

@@ -1,42 +1,40 @@
 
 <ion-content class="home no-scroll">
-    <ion-button fill="none" (click)="clickBack()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
     <ion-img src="/assets/ekplores.png"></ion-img>
-  <ion-segment value="default">
-    <ion-segment-button value="default">
-      <ion-label>Short Term</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="segment">
-      <ion-label>6 Months</ion-label>
-    </ion-segment-button>
-  </ion-segment>
+    <ion-segment [(ngModel)]="selectedSegment">
+      <ion-segment-button value="short">
+        <ion-label>Short Term</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="6 months">
+        <ion-label>6 Months</ion-label>
+      </ion-segment-button>
+    </ion-segment>
     <ion-grid>
       <ion-row class="inp">
         <ion-col size="8.5">
           <ul>
             <li>
-                <input type="hidden" id="unik">
-                <ion-input placeholder="Name" name="ngalan" id="name"></ion-input>
+                <ion-input placeholder="Name" name="ngalan" id="name" required></ion-input>
               </li>
             <li>
-              <ion-input type="email" placeholder="Email"></ion-input> 
+              <ion-input type="email" placeholder="Email" required></ion-input> 
             </li>
             <li>
-              <ion-input placeholder="Phone Number" type="tel"></ion-input>
+              <ion-input placeholder="Phone Number" type="tel"required></ion-input>
             </li>
             <li>
-              <ion-select label="Unit" id="house">
+              <ion-select label="Unit" id="house" required>
                 <ion-select-option value="Model 1">Model 1</ion-select-option>
-                <ion-select-option value="Model 1">Model 2</ion-select-option>
-                <ion-select-option value="Model 1">Model 3</ion-select-option>
-                <ion-select-option value="Model 1">Model 4</ion-select-option>
+                <ion-select-option value="Model 2">Model 2</ion-select-option>
+                <ion-select-option value="Model 3">Model 3</ion-select-option>
+                <ion-select-option value="Model 4">Model 4</ion-select-option>
               </ion-select>
             </li>
             <li>
-              <ion-input placeholder="Move-In-Date" type="date" id="date"     displayFormat="MMMM DD, YYYY"     pickerFormat="MMMM DD, YYYY"></ion-input>
+              <ion-input placeholder="Move-In-Date" type="date" id="date" required></ion-input>
             </li>
             <li>
-              <ion-input placeholder="Move-Out-Date" type="date"></ion-input>
+              <ion-input placeholder="Move-Out-Date" type="date" required></ion-input>
             </li>           
           </ul>
           <button class="log" (click)="handleSubmit($event)">SUBMIT</button>       

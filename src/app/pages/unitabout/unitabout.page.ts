@@ -15,5 +15,9 @@ export class UnitaboutPage implements OnInit {
   ngOnInit() {
     this.modelDetails = history.state.modelDetails;
   }
+
+  clickBack () {
+    this.navCtrl.back();
+  }
 }
  

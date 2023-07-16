@@ -7,25 +7,36 @@
   </div>
   <ion-list>
       <ion-item lines="none">
-          <ion-input  placeholder=" Name" name="bahay" id="house" type="text"></ion-input>
+          <ion-input  placeholder=" Last Name" name="bahay" id="lname" type="text"></ion-input>
       </ion-item>
       <ion-item lines="none">
-        <ion-input  placeholder=" house Unit" name="bahay" id="house" type="text"></ion-input>
+        <ion-input  placeholder=" First Name" name="bahay" id="fname" type="text"></ion-input>
       </ion-item>
       <ion-item lines="none">
-        <ion-input  placeholder=" Date of Payment" name="bahay" id="house" type="text"></ion-input>
+        <ion-input  placeholder=" Middle Name" name="bahay" id="mname" type="text"></ion-input>
       </ion-item>
       <ion-item lines="none">
-        <ion-input  placeholder=" Mode of Payment" name="bahay" id="house" type="text"></ion-input>
+        <ion-select label="Unit" id="house" required>
+          <ion-select-option value="Model 1">Model 1</ion-select-option>
+          <ion-select-option value="Model 2">Model 2</ion-select-option>
+          <ion-select-option value="Model 3">Model 3</ion-select-option>
+          <ion-select-option value="Model 4">Model 4</ion-select-option>
+        </ion-select>
       </ion-item>
       <ion-item lines="none">
-        <ion-input  placeholder=" Amount" name="bahay" id="house" type="text"></ion-input>
+        <ion-input  placeholder=" Email"  id="email" type="email"></ion-input>
       </ion-item>
       <ion-item lines="none">
-        <ion-input  placeholder=" Reference Number" name="bahay" id="house" type="text"></ion-input>
+        <ion-input  placeholder=" Phone Number" name="bahay" id="num" type="Number"></ion-input>
       </ion-item>
       <ion-item lines="none">
-        <button>SUBMIT</button>
+        <ion-input  placeholder=" Username" name="bahay" id="user" type="text"></ion-input>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-input  placeholder=" Password" name="bahay" id="pass" type="Password"></ion-input>
+      </ion-item>
+      <ion-item lines="none">
+        <button (click)="accountSubmit($event)">SUBMIT</button>
       </ion-item>
   </ion-list>
  </ion-content>

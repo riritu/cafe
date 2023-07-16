@@ -8,6 +8,7 @@ export interface FormData {
   unit: string;
   ids: string;
   date: string;
+  type: string;
 }
 
 @Component({
@@ -17,6 +18,7 @@ export interface FormData {
 })
 export class BookingPage implements OnInit {
   formDataList: FormData[] = [];
+  selectedSegment: string = ''; // Add the selectedSegment variable here
 
   constructor(private navCtrl: NavController, private toastController: ToastController) { }
 
@@ -31,25 +33,36 @@ export class BookingPage implements OnInit {
     const hos = (document.getElementById("house") as HTMLInputElement).value;
     const det = (document.getElementById("date") as HTMLInputElement).value;
     const id = this.generateRandomId();
-
-    const formData: FormData = {
-      name: nem,
-      unit: hos,
-      ids: id,
-      date: det,
-    };
-    this.formDataList.push(formData);
-    localStorage.setItem("formentry", JSON.stringify(this.formDataList));
-    console.log(this.formDataList);
-    const toast = await this.toastController.create({
-      message: 'Succesfull Booking!',
-      duration: 2000, // Duration in milliseconds
-      color: 'success', // Optional color for the toast
-      position: 'top', // Position of the toast on the screen (top, bottom, or middle)
-    });
-    toast.present();
-    this.navCtrl.navigateBack('/homer/gallery');
-
+    if (nem === '' || hos === '' || det === '') {
+      const toast = await this.toastController.create({
+        message: 'Invalid credentials!',
+        duration: 2000, // Duration in milliseconds
+        color: 'danger', // Optional color for the toast
+        position: 'top', // Position of the toast on the screen (top, bottom, or middle)
+      });
+      toast.present();
+    }
+     else {
+      const formData: FormData = {
+        name: nem,
+        unit: hos,
+        ids: id,
+        date: det,
+        type: this.selectedSegment,
+      };
+      this.formDataList.push(formData);
+      localStorage.setItem("formentry", JSON.stringify(this.formDataList));
+      console.log(this.formDataList);
+      const toast = await this.toastController.create({
+        message: 'Succesfull Booking!',
+        duration: 2000, // Duration in milliseconds
+        color: 'success', // Optional color for the toast
+        position: 'top', // Position of the toast on the screen (top, bottom, or middle)
+      });
+      toast.present();
+      this.navCtrl.navigateBack('/homer/gallery');
+      
+    }
   }
 
 
