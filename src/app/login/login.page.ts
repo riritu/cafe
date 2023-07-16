@@ -22,14 +22,13 @@ export class LoginPage implements OnInit {
     const storedFormData = localStorage.getItem('tenants');
     if (storedFormData) {
       const accounttList: Tenant[] = JSON.parse(storedFormData);
-      const matchedUser = accounttList.find((tenant) => tenant.user === this.username && tenant.pass === this.password);
+      const matchedUser = accounttList.find((tenant) => tenant.user === this.username && tenant.pass === this.password);  
       if (matchedUser) {
-        // Successful login
-        console.log('Login successful');
-        // Redirect to another page
-        this.navCtrl.navigateForward('/homer/home');
+        const userId = matchedUser.ids;
+        this.navCtrl.navigateForward(['/tabs/dashboard', userId]);
+
+      }
       } else {
-        // Invalid login
         const toast = await this.toastController.create({
           message: 'Invalid credentials!',
           duration: 10000,
@@ -38,9 +37,8 @@ export class LoginPage implements OnInit {
         });
         toast.present();
       }
-    }
-    
-    
+     
+    } 
     
   }
-}
+

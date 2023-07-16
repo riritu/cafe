@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { ReqdetailsPage } from './adminpage/reqdetails/reqdetails.page';
+import { DashboardPage } from './tenantpage/dashboard/dashboard.page';
+
 const routes: Routes = [
   {
     path: 'home',
@@ -59,9 +61,21 @@ const routes: Routes = [
     path: 'reqdetails/:id', component: ReqdetailsPage 
   },
   {
+    path: 'tabs/dashboard/:id', component: DashboardPage 
+  },
+  {
     path: 'reqdetails',
     loadChildren: () => import('./adminpage/reqdetails/reqdetails.module').then( m => m.ReqdetailsPageModule)
+  },
+  {
+    path: 'tabs',
+    loadChildren: () => import('./tenantpage/tabs/tabs.module').then( m => m.TabsPageModule)
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./tenantpage/dashboard/dashboard.module').then( m => m.DashboardPageModule)
   }
+
 ];
 
 @NgModule({
