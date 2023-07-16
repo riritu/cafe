@@ -6,6 +6,8 @@ export interface FormData {
   unit: string;
   ids: string;
   date: string;
+  email: string;
+  pnum: string;
 }
 
 

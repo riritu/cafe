@@ -31,7 +31,7 @@ export class ReqdetailsPage implements OnInit {
   }
 
   clickBack () {
-    this.navCtrl.back();
+    this.navCtrl.back()
   }
 
   getFormDetailsById(id: string) {
@@ -52,7 +52,6 @@ export class ReqdetailsPage implements OnInit {
       const itemToRemove = formDetailsArray.find(formData => formData.ids === id);
 
       if (itemToRemove) {
-
         const storeRequest: StoreRequest = {
           name: itemToRemove.name,
           unit: itemToRemove.name,
