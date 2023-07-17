@@ -7,7 +7,9 @@
   </div>
   <ion-list>
     <ion-item lines="none">
-      <ion-input placeholder ="Name" name="name" id="name" type="text"></ion-input>
+      <ion-select [(ngModel)]="selectedOption" placeholder ="Name" id="name">
+        <ion-select-option *ngFor="let accdetailList of accDetailList" [value]="accdetailList.lname">{{ accdetailList.lname }}</ion-select-option>
+      </ion-select>
     </ion-item>
     <ion-item lines="none">
       <ion-select placeholder ="Unit" id="house">

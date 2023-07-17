@@ -28,7 +28,10 @@ export class AccountPage implements OnInit {
   constructor(private navCtrl: NavController, private toastController: ToastController) { }
 
   ngOnInit() {
-    // Retrieve stored form data from local storage
+    const storedData = localStorage.getItem('tenants');
+    if (storedData) {
+      this.accounttList = JSON.parse(storedData);
+  }
     
   }
 
@@ -68,6 +71,7 @@ export class AccountPage implements OnInit {
 
     this.accounttList.push(tenant);
     localStorage.setItem('tenants',JSON.stringify(this.accounttList));
+    console.log(this.accounttList)
     const toast = await this.toastController.create({
       message: 'Succesfull Input!',
       duration: 2000, // Duration in milliseconds

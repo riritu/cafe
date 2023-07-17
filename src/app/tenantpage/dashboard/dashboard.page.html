@@ -23,8 +23,15 @@
     <div>
       <h3 class="pay">Payment History</h3>
     </div>
-    <p>Name: {{ accDetails?.lname }}</p>
-    <p>Unit: {{ accDetails?.unit }}</p>
-    <p>Ids: {{ accDetails?.ids }}</p>
-    <p>Date: {{ accDetails?.fname }}</p>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Payment History</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Name: {{ paymentInfos?.name }}</p>
+        <p>Unit: {{ paymentInfos?.unit }}</p>
+        <p>Ids: {{ paymentInfos?.ids }}</p>
+        <p>Date: {{ paymentInfos?.amount }}</p>      
+      </ion-card-content>
+    </ion-card>
   </ion-content>

@@ -45,7 +45,6 @@ export class ReqdetailsPage implements OnInit {
   }
 
   approveIt(id: string, action: string)  {  
-    // Retrieve the array from local storage
     const storedFormData = localStorage.getItem('formentry');
     if (storedFormData) {
       const formDetailsArray: FormData[] = JSON.parse(storedFormData);

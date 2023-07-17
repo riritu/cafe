@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
-import { Tenant } from '../../adminpage/account/account.page';
+import { Payment } from '../../adminpage/payment/payment.page';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -9,23 +9,22 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./dashboard.page.scss'],
 })
 export class DashboardPage implements OnInit {
-  accDetails: any;
+  paymentInfos: any;
   constructor(private navCtrl: NavController, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
     this.activatedRoute.params.subscribe(params => {
       const id = params['id'];
-      this.accDetails = this.getFormDetailsById(id);
-      
+      this.paymentInfos = this.getFormDetailsById(id);
     });
   }
 
   getFormDetailsById(id: string) {
-    const storedFormData = localStorage.getItem('tenants');
+    const storedFormData = localStorage.getItem('payments');
     if (storedFormData) {
-      const accounttList: Tenant[] = JSON.parse(storedFormData);
-      const accDetails = accounttList.find(tenant => tenant.ids === id);
-      return accDetails;
+      const paymentList: Payment[] = JSON.parse(storedFormData);
+      const paymentInfo = paymentList.find(payment => payment.name === id);
+      return paymentInfo;
     }
     return null;
   }

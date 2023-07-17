@@ -74,6 +74,10 @@ const routes: Routes = [
   {
     path: 'dashboard',
     loadChildren: () => import('./tenantpage/dashboard/dashboard.module').then( m => m.DashboardPageModule)
+  },
+  {
+    path: 'account',
+    loadChildren: () => import('./adminpage/account/account.module').then( m => m.AccountPageModule)
   }
 
 ];

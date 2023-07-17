@@ -21,7 +21,7 @@ ion-input{
   font-size: larger;
   font-weight: bold;
   border-radius: 4vw;
-  border: 1px solid #000;
+  border: 1.3px solid #000;
   background: #ffffff;
 }
 
@@ -53,12 +53,9 @@ ion-button.log:hover {
 ion-col {
   padding: 0;
   margin: auto;
-  margin-top: 2%;
 }
 
-ion-toast .toast-message {
---color: red !important; 
-}
+
 
 ul {
   padding-left: 0;
@@ -71,11 +68,10 @@ li {
 }
 
 ion-input {
-  height: 0.1vw;
-  --padding-end: 15%;
-  --padding-start: 15%;
-  --border-radius: 4rem;
-  --background: #ffffff;
+  height: 1.6vw; /* Set your desired height here */
+  --padding-end:  2%;
+  --padding-start: 2%;
+  --border-radius: 1rem;
 }
 
 .log {

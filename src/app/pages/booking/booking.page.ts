@@ -25,8 +25,10 @@ export class BookingPage implements OnInit {
   constructor(private navCtrl: NavController, private toastController: ToastController) { }
 
   ngOnInit() {
-    // Retrieve stored form data from local storage
-    
+    const storedData = localStorage.getItem('tenants');
+    if (storedData) {
+      this.formDataList = JSON.parse(storedData);
+    }
   }
 
   async handleSubmit(event: Event) {

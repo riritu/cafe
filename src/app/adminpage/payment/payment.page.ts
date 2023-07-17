@@ -19,11 +19,16 @@ export interface Payment {
 })
 export class PaymentPage implements OnInit {
   paymentList: Payment[] = [];
-
+  accDetailList: { lname: string }[] = [];
+  selectedOption: string = ''; 
+  
   constructor(private navCtrl: NavController, private toastController: ToastController) { }
 
   ngOnInit() {
-    // Retrieve stored form data from local storage
+    const storedData = localStorage.getItem('tenants');
+    if (storedData) {
+      this.accDetailList = JSON.parse(storedData);
+    }
     
   }
 
@@ -47,7 +52,7 @@ export class PaymentPage implements OnInit {
     };
 
     this.paymentList.push(payment);
-    localStorage.setItem('payments',JSON.stringify(payment));
+    localStorage.setItem('payments',JSON.stringify(this.paymentList));
     const toast = await this.toastController.create({
       message: 'Succesfull Input!',
       duration: 2000, // Duration in milliseconds
