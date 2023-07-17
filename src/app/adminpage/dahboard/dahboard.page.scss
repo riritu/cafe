@@ -14,7 +14,7 @@ ion-card-header{
 }
 
 ion-card-title.toptitle{
-    font-family: 'League Spartan',sans-serif;
+    font-family: 'League Spartan', sans-serif;
     font-weight: bold;
     font-size: large;
     color: rgb(54, 41, 41);
@@ -32,13 +32,18 @@ ion-title {
     color: #352414;
 
 }
+.ion-padding {
+    font-weight: bold;
+    color: #352414;
+}
 
 .tn{
-    color:rgb(54, 41, 41);
+    color:#352414;
     font-size: x-large;
+    font-weight: bold;
     margin-left: 5%;
-    margin-bottom: 3%; 
     display: flex;
+    margin-bottom: 10%;
     justify-content: space-between;
   
     .start {
@@ -62,23 +67,27 @@ ion-title {
      } 
 }
 
-ion-card-content{
+ion-card-content {
     font-family: 'League Spartan'
 }
 
-.money{
+.money {
     font-size: medium;
 }
 
-.slot{
+.slot {
     font-size: large;
+    font-weight: lighter;
 }
 
-.second{
-    bottom: 2%;
+.first {
+    bottom: 4%;
 }
 
-.h3{
+.second {
+    bottom: 7%;
+}
+
+.h3 {
     bottom:1%;
 }
-
