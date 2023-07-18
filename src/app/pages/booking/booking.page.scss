@@ -1,4 +1,3 @@
-
 ion-segment {
     margin: 0 auto 0;
     width: 240px;
@@ -21,7 +20,7 @@ ion-img {
 
 ul {
     padding-left: 0;
-    list-style: none;
+    list-style: none; 
 }
 
 li {
@@ -29,11 +28,13 @@ li {
 }
 
 ion-input, ion-select {
+    border: 1px solid #000;
     height: 1.6vw; /* Set your desired height here */
     --padding-end: 15%;
     --padding-start: 15%;
-    --border-radius: 4rem;
-    --background: #ffffff;
+    border-radius: 4rem;
+    border: 1px solid #000;
+    background: #ffffff;
 }
 
 ion-col {
@@ -58,7 +59,6 @@ ion-col {
         var(--_g) calc(var(--_p,0%) - 100%) 100%,
         var(--_g) calc(200% - var(--_p,0%)) 100%;
 }
-
 
 
 /* ion-content.form{
