@@ -54,9 +54,9 @@
               </ion-col>
               <ion-col class="detail">
                   <ion-card-header>
-                    <ion-card-title>
-                      <div style="font-size:2.1rem;">{{ accDataList[0]!.lname }} {{ accDataList[0]!.fname }}</div>
-                      <div class="money">{{ accDataList[0]!.unit }}</div>
+                    <ion-card-title *ngIf="accDataList.length > 0">
+                      <div style="font-size:2.1rem;">{{ accDataList[0]?.lname }}, {{ accDataList[0]?.fname }}</div>
+                      <div class="money">{{ accDataList[0]?.unit }}</div>
                     </ion-card-title>
                   </ion-card-header> 
                </ion-col>
@@ -82,9 +82,9 @@
               </ion-col>
               <ion-col class="detail">
                   <ion-card-header>
-                    <ion-card-title>
-                      <div style="font-size:2.1rem;">{{ formDataList[0]!.name }}</div>
-                      <div class="money">{{ formDataList[0]!.unit }}, {{ formDataList[0]!.date }}</div>
+                    <ion-card-title *ngIf="formDataList.length > 0">
+                      <div style="font-size:2.1rem;">{{ formDataList[0]?.name }}</div>
+                      <div class="money">{{ formDataList[0]?.unit }}, {{ formDataList[0]?.date }}</div>
                     </ion-card-title>
                   </ion-card-header> 
                </ion-col>
