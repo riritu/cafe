@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">HomeQuest</string>
+    <string name="title_activity_main">HomeQuest</string>
+    <string name="package_name">com.trilc.gallery</string>
+    <string name="custom_url_scheme">com.trilc.gallery</string>
+</resources>
