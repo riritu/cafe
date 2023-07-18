@@ -27,7 +27,7 @@ export interface Tenant {
 })
 export class DahboardPage implements OnInit {
   accDataList: Tenant[] = [];
-  formDataList: FormData[] = []; // Initialize formDataList as an empty array
+  formDataList: FormData[] = []; 
   constructor() { }
 
   ngOnInit() {

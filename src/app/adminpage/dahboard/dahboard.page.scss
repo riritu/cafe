@@ -20,11 +20,11 @@ ion-card-title.toptitle{
     color: rgb(54, 41, 41);
 }
 ion-toolbar {
+    margin-top: 2%;
     --background: #ffffff;
 }
 
 ion-title {
-    margin-top: 1rem;
     font-family: 'League Spartan', sans-serif;
     text-transform:uppercase;
     font-size: 2.1rem;
@@ -43,7 +43,7 @@ ion-title {
     font-weight: bold;
     margin-left: 5%;
     display: flex;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     justify-content: space-between;
   
     .start {
@@ -81,25 +81,27 @@ ion-card-content {
 }
 
 .first {
-    bottom: 4%;
+   margin-bottom: 5%;
 }
 
-.second {
-    bottom: 7%;
-}
 
-.h3 {
-    bottom:1%;
-}
 
 .who {
     color:#352414;
     font-size: x-large;
     font-weight: bold;
     margin-left: 5%;
-    margin-top: 5%;
+    margin-top: 1px !important;
 }
 
 .book {
     bottom: 15%;
+}
+
+.wow {
+    color:#352414;
+    font-size: x-large;
+    font-weight: bold;
+    margin-left: 5%;
+    margin-top: 5% !important;
 }

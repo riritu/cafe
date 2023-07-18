@@ -13,7 +13,7 @@ ion-label{
   font-weight: bold;
 }
 
-ion-input{
+ion-input ,ion-textarea{
   height: 2.6rem;
   outline: none;
   text-align: center;
@@ -67,7 +67,7 @@ li {
 
 }
 
-ion-input {
+ion-input, ion-textarea {
   height: 1.6vw; /* Set your desired height here */
   --padding-end:  2%;
   --padding-start: 2%;

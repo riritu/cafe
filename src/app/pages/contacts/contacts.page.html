@@ -13,19 +13,19 @@
                 <ion-input placeholder="Name" name="ngalan" id="name" required></ion-input>
               </li>
             <li>  
-              <ion-input type="email" placeholder="Email"></ion-input> 
+              <ion-input type="email" placeholder="Email" id="email" required></ion-input> 
             </li>
             <li>
-              <ion-input placeholder="Phone Number" type="tel"></ion-input>
+              <ion-input placeholder="Phone Number" type="tel" id="tel" required></ion-input>
             </li>
             <li>
-              <ion-input placeholder="House Unit" name="bahay" id="house"></ion-input>
+              <ion-input placeholder="House Unit" name="bahay" id="house" required></ion-input>
             </li>
             <li>
-              <ion-input placeholder="Comments" type="comms" ></ion-input>
+              <ion-textarea placeholder="Comments" type="text" id="comms" required></ion-textarea>
             </li>          
           </ul>
-          <button class="log">SUBMIT</button>       
+          <button class="log" (click)="emailSubmit($event)">SUBMIT</button>       
         </ion-col>
       </ion-row>
     </ion-grid>

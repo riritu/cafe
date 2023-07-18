@@ -1,37 +1,28 @@
-  <ion-header>
-    <ion-toolbar>
-      <ion-title class="top_title">HOME</ion-title>
-    </ion-toolbar>
-  </ion-header> 
-  <ion-content class="gallery">
-    <ion-card class="lot">
-      <ion-card-content>
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="top_title">TRI-LC ENTERPRISES</ion-title>
+  </ion-toolbar>
+</ion-header> 
+<ion-content class="gallery">
+  <ion-card class="lot">
+    <ion-card-content>
+      <ion-card-title>
+          <div class="info">Admin Information</div>
+          <div class="imgs">
+            <img src="assets/image 21.png" class="call">
+            <img src="assets/Ellipse 1.png" class="pic">
+            <img src="assets/image 22.png" class="meg">
+          </div>
+          <div class="name">Mary Ann</div>
+          <div class="loc">Gulod Labac, Batangas City</div>
+      </ion-card-title>
+    </ion-card-content>
+  </ion-card>
+  <div class="pay">Payment History</div>
+  <ion-card *ngFor="let payment of paymentInfos">
+    <ion-card-content class="payments">
+      Date: {{ payment.date }} | Reference Number: {{ payment.rfn }}  | Amount: ₱{{ payment.amount }}
+    </ion-card-content>
+  </ion-card>
+</ion-content>
 
-        <ion-card-title>
-            <div class="info">Admin Information</div>
-            <div class="imgs">
-              <img src="assets/image 21.png" class="call">
-              <img src="assets/Ellipse 1.png" class="pic">
-              <img src="assets/image 22.png" class="meg">
-            </div>
-            <div class="name">Mary Ann</div>
-            <div class="loc">Gulod Labac, Batangas City</div>
-        </ion-card-title>
-        
-      </ion-card-content>
-    </ion-card>
-    <div>
-      <h3 class="pay">Payment History</h3>
-    </div>
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>Payment History</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>Name: {{ paymentInfos?.name }}</p>
-        <p>Unit: {{ paymentInfos?.unit }}</p>
-        <p>Ids: {{ paymentInfos?.ids }}</p>
-        <p>Date: {{ paymentInfos?.amount }}</p>      
-      </ion-card-content>
-    </ion-card>
-  </ion-content>

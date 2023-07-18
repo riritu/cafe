@@ -1,36 +1,44 @@
+
+.top_title{
+    margin-top: 1rem;
+    font-family: 'League Spartan', sans-serif;
+    text-transform:uppercase;
+    font-size: 2.1rem;
+    text-align: center;
+    color: #352414;
+}
 .info{
     font-size: small;
-    margin-left: 30%;
-    }
-    
-    .imgs{
-        margin-left: 24%;
-        margin-top: 5%;
-    }
-    
-    .call{
-        margin-right: 15%;
-    }
-    .pic{
-        margin-right: 15%;
-        margin-left: 2%;
-    }
-    
-    .name{
-        font-size: medium;
-        margin-left: 37%;
-    }
-    
-    .loc{
-        font-size: x-small;
-        margin-left: 27%;
-    }
-    
-    .pay {
-        position: absolute; 
-        top: 28%;
-        color: rgb(54, 41, 41);
-        margin-left: 5%;
-        font-size: large;
-    }
-    
+    margin-left: 33%;
+}
+.imgs{
+    margin-left: 24%;
+    margin-top: 5%;
+}
+.call{
+    margin-right: 15%;
+}
+.pic{
+    margin-right: 15%;
+    margin-left: 2%;
+}
+.name{
+    font-size: medium;
+    margin-left: 37%;
+}
+.loc{
+    font-size: x-small;
+    margin-left: 29%;
+}
+ion-card{
+    border:2px solid #266A06;
+}
+.pay{
+    font-size: medium;
+    font-style: italic;
+    margin-left: 4%;
+    margin-top: 6%;
+}
+ion-card-content.payments{
+    margin:auto;
+}

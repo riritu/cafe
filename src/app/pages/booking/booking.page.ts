@@ -20,7 +20,7 @@ export interface FormData {
 })
 export class BookingPage implements OnInit {
   formDataList: FormData[] = [];
-  selectedSegment: string = ''; // Add the selectedSegment variable here
+  selectedSegment: string = '';
 
   constructor(private navCtrl: NavController, private toastController: ToastController) { }
 

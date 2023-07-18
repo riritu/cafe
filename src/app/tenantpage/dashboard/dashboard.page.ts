@@ -1,7 +1,16 @@
+
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
-import { Payment } from '../../adminpage/payment/payment.page';
+import { Payment as AdminPayment } from '../../adminpage/payment/payment.page'; // Rename the imported interface
 import { ActivatedRoute } from '@angular/router';
+
+export interface Payment {
+  name: string;
+  ids: string;
+  amount: string;
+  date: string;
+  rfn: string;
+}
 
 @Component({
   selector: 'app-dashboard',
@@ -9,7 +18,8 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./dashboard.page.scss'],
 })
 export class DashboardPage implements OnInit {
-  paymentInfos: any;
+  paymentInfos: Payment[] = [];
+
   constructor(private navCtrl: NavController, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
@@ -23,10 +33,10 @@ export class DashboardPage implements OnInit {
     const storedFormData = localStorage.getItem('payments');
     if (storedFormData) {
       const paymentList: Payment[] = JSON.parse(storedFormData);
-      const paymentInfo = paymentList.find(payment => payment.name === id);
-      return paymentInfo;
+      const filteredPayments = paymentList.filter(payment => payment.name === id);
+      return filteredPayments;
     }
-    return null;
+    return [];
   }
 }
 
