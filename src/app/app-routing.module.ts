@@ -78,7 +78,11 @@ const routes: Routes = [
   {
     path: 'account',
     loadChildren: () => import('./adminpage/account/account.module').then( m => m.AccountPageModule)
+  },  {
+    path: 'adminmain',
+    loadChildren: () => import('./adminmain/adminmain.module').then( m => m.AdminmainPageModule)
   }
+
 
 ];
 
