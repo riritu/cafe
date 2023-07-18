@@ -42,3 +42,57 @@ ion-card{
 ion-card-content.payments{
     margin:auto;
 }
+
+ion-card-title.toptitle{
+    font-family: 'League Spartan', sans-serif;
+    font-weight: bold;
+    font-size: large;
+    color: rgb(54, 41, 41);
+}
+ion-toolbar {
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+    --background: #ffffff;
+
+    ion-title {
+        font-family: 'League Spartan', sans-serif;
+        text-transform:uppercase;
+        font-size: 2.1rem;
+        color: #352414;
+    }
+    .end {
+        margin-top: 4%;
+    }
+}
+
+.tn{
+    color:#352414;
+    font-size: x-large;
+    font-weight: bold;
+    margin-left: 5%;
+    display: flex;
+    margin-bottom: 5%;
+    justify-content: space-between;
+  
+    .start {
+        order: 1;
+    }
+    
+    .end {        
+        text-decoration: none;
+        margin-right: 5%;
+        font-size: 1.3rem;
+        order: 2;
+        display: flex;
+        align-items: center;
+    }
+    .end ion-icon {
+        font-size: 2.3rem;
+        margin-right: 0.1rem;
+      }
+     a {
+        color: rgb(54, 41, 41);
+        text-decoration: none;
+     } 
+}

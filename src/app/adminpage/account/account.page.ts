@@ -46,7 +46,7 @@ export class AccountPage implements OnInit {
     const pass = (document.getElementById("pass") as HTMLInputElement).value;
     const hos = (document.getElementById("house") as HTMLInputElement).value;
     const id = this.generateRandomId();
-    
+    const matchedUser = this.accounttList.find((tenant) => tenant.user === uname && tenant.pass === pass);
     if (lnem === '' || hos === '' || fnem === '' || mnem === ''|| gmail === ''|| pnum === ''|| uname === '' || pass === '') {
       const toast = await this.toastController.create({
         message: 'Invalid credentials!',
@@ -56,6 +56,15 @@ export class AccountPage implements OnInit {
       });
       toast.present();
     }
+    if (matchedUser) {
+      const toast = await this.toastController.create({
+        message: 'Invalid credentials!',
+        duration: 2000,
+        color: 'danger',
+        position: 'top',
+      });
+      toast.present();
+    } 
     else {
       const tenant: Tenant = {
         lname: lnem,

@@ -21,40 +21,49 @@ background: #FFF;
 }
 ion-grid.inp {
   position: absolute;
-  top: 60%;
+  top: 55%;
   width: 100%;
   
 }
-ion-button {
-  padding: 3.3px;
+ion-button.logreal {
+  width: 12rem;
   font-family: 'League Spartan', sans-serif;
   color: #FFFCFC;
   font-weight: 700;
   word-wrap: break-word;   
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: #ffffff;
-  --border-radius: 22px;
+  --border-radius: 3rem;
   --background: #301B09;
   --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
-  transition: background-color 0.3s ease; /* Smooth transition effect */
+  transition: background-color 0.3s ease;
 }
 
-ion-button.log:hover {
+ion-button.logreal:hover {
 --background:#000;
 }
 
-ion-toast {
-align-content: center;
---background: var(--ion-color-danger);
---color: var(--ion-color-light);
-}
-
-ion-toast .toast-message {
---color: red; 
-
-}
 
 ion-col.login {
+  margin-top: 5% !important;
   margin: auto;
 }
 
+ion-button.log {
+  width: 12rem;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 700;
+  word-wrap: break-word;   
+  font-size: 1.4rem;
+  color: #301B09;
+  --border-radius: 3rem;
+  --border-top: 2px red;
+  --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+  transition: background-color 0.3s ease;
+  padding-left: 3rem;
+  margin: 0 !important;
+}
+
+ion-button.logreal {
+  padding-right: 3rem;
+}

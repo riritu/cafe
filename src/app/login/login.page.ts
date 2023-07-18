@@ -21,7 +21,7 @@ export class LoginPage implements OnInit {
     const storedFormData = localStorage.getItem('tenants');
     if (storedFormData) {
       this.accounttList = JSON.parse(storedFormData);
-      console.log(this.accounttList)
+      console.log(this.accounttList);
     }
   }
 
@@ -32,7 +32,6 @@ export class LoginPage implements OnInit {
     }
     else if (storedFormData) {
       const accounttList: Tenant[] = JSON.parse(storedFormData);
-      console.log(accounttList)
       const matchedUser = accounttList.find((tenant) => tenant.user === this.username && tenant.pass === this.password);  
       if (matchedUser) {
         const userId = matchedUser.lname;
@@ -59,6 +58,10 @@ export class LoginPage implements OnInit {
       toast.present();
     }    
     } 
+
+    view() {
+      this.navCtrl.navigateForward('/homer/home');
+    }
     
   }
 

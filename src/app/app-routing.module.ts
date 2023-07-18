@@ -46,10 +46,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/unitabout/unitabout.module').then( m => m.UnitaboutPageModule)
   },
   {
-    path: 'tenant',
-    loadChildren: () => import('./tenant/tenant.module').then( m => m.TenantPageModule)
-  },
-  {
     path: 'booking',
     loadChildren: () => import('./pages/booking/booking.module').then( m => m.BookingPageModule)
   },
@@ -78,11 +74,8 @@ const routes: Routes = [
   {
     path: 'account',
     loadChildren: () => import('./adminpage/account/account.module').then( m => m.AccountPageModule)
-  },  {
-    path: 'adminmain',
-    loadChildren: () => import('./adminmain/adminmain.module').then( m => m.AdminmainPageModule)
-  }
-
+  },
+  
 
 ];
 

@@ -23,7 +23,7 @@ export class ContactsPage implements OnInit {
     const storedData = localStorage.getItem('emails');
     if(storedData) {
       this.comsList = JSON.parse(storedData);
-      console.log(this.comsList)
+      console.log(this.comsList);
     }
   }
 
@@ -34,7 +34,7 @@ export class ContactsPage implements OnInit {
     const nem = (document.getElementById("name") as HTMLInputElement).value;
     const hos = (document.getElementById("house") as HTMLInputElement).value;
     const sabi = (document.getElementById("comms") as HTMLInputElement).value;
-    if (nem === '') {
+    if (nem == '' || pnem == '' || emel == '' || hos == '' || sabi == '') {
       const toast = await this.toastController.create({
         message: 'Invalid credentials!',
         duration: 2000, // Duration in milliseconds

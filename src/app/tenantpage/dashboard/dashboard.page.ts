@@ -1,8 +1,8 @@
 
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
-import { Payment as AdminPayment } from '../../adminpage/payment/payment.page'; // Rename the imported interface
 import { ActivatedRoute } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 
 export interface Payment {
   name: string;
@@ -20,7 +20,7 @@ export interface Payment {
 export class DashboardPage implements OnInit {
   paymentInfos: Payment[] = [];
 
-  constructor(private navCtrl: NavController, private activatedRoute: ActivatedRoute) { }
+  constructor(private alertController: AlertController, private navCtrl: NavController, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
     this.activatedRoute.params.subscribe(params => {
@@ -37,6 +37,31 @@ export class DashboardPage implements OnInit {
       return filteredPayments;
     }
     return [];
+  }
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      header: 'You want to log out?',
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          
+        },
+        {
+          text: 'OK',
+          role: 'confirm',
+          
+        },
+      ],
+    });
+
+    await alert.present();
+
+    const { role } = await alert.onDidDismiss();
+    if (role === 'confirm') {
+      this.navCtrl.navigateBack('/login');
+    } else {
+    }
   }
 }
 

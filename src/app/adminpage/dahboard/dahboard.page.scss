@@ -21,17 +21,22 @@ ion-card-title.toptitle{
 }
 ion-toolbar {
     margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
     --background: #ffffff;
+
+    ion-title {
+        font-family: 'League Spartan', sans-serif;
+        text-transform:uppercase;
+        font-size: 2.1rem;
+        color: #352414;
+    }
+    .end {
+        margin-top: 4%;
+    }
 }
 
-ion-title {
-    font-family: 'League Spartan', sans-serif;
-    text-transform:uppercase;
-    font-size: 2.1rem;
-    text-align: center;
-    color: #352414;
 
-}
 .ion-padding {
     font-weight: bold;
     color: #352414;
@@ -83,8 +88,6 @@ ion-card-content {
 .first {
    margin-bottom: 5%;
 }
-
-
 
 .who {
     color:#352414;

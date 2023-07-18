@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertController } from '@ionic/angular';
+import { NavController } from '@ionic/angular';
 
 export interface FormData {
   name: string;
@@ -17,7 +19,6 @@ export interface Tenant {
   ids: string;
   user: string;
   pass: string;
-
 }
 
 @Component({
@@ -28,7 +29,8 @@ export interface Tenant {
 export class DahboardPage implements OnInit {
   accDataList: Tenant[] = [];
   formDataList: FormData[] = []; 
-  constructor() { }
+
+  constructor(private alertController: AlertController, private navCtrl: NavController) {}
 
   ngOnInit() {
     const storedFormData = localStorage.getItem('formentry');
@@ -42,5 +44,29 @@ export class DahboardPage implements OnInit {
       console.log(this.accDataList);
     }
   }
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      header: 'You want to log out?',
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          
+        },
+        {
+          text: 'OK',
+          role: 'confirm',
+          
+        },
+      ],
+    });
 
+    await alert.present();
+
+    const { role } = await alert.onDidDismiss();
+    if (role === 'confirm') {
+      this.navCtrl.navigateBack('/login');
+    } else {
+    }
+  }
 }

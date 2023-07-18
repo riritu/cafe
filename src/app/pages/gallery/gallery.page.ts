@@ -57,7 +57,6 @@ export class GalleryPage {
 
     if (index >= 0 && index < this.modelDetails.length) {
       const selectedModel = this.modelDetails[index];
-      localStorage.clear();
       this.navCtrl.navigateForward('/unitabout', {
         state: {
           modelDetails: selectedModel
