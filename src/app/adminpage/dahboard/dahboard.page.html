@@ -43,8 +43,9 @@
       </ion-grid>
     </ion-card-content>
   </ion-card>
-  <h3 class="who">Tenant</h3>
-    <div>
+    <div  *ngIf="accDataList.length > 0">
+      <h3 class="who">Tenant</h3>
+
       <ion-card class="book">
         <ion-card-content>
           <ion-grid>
@@ -55,8 +56,8 @@
               <ion-col class="detail">
                   <ion-card-header>
                     <ion-card-title>
-                      <div style="font-size:2.1rem;">{{ accDataList[0]!.lname }} {{ accDataList[0]!.fname }}</div>
-                      <div class="money">{{ accDataList[0]!.unit }}</div>
+                      <div style="font-size:2.1rem;">{{ accDataList[0]?.lname }} {{ accDataList[0]?.fname }}</div>
+                      <div class="money">{{ accDataList[0]?.unit }}</div>
                     </ion-card-title>
                   </ion-card-header> 
                </ion-col>
@@ -72,7 +73,7 @@
       <span><a href="/requests">View All</a></span>
     </div>
   </div>
-    <div>
+    <div *ngIf="formDataList.length > 0">
       <ion-card class="book">
         <ion-card-content>
           <ion-grid>
@@ -83,8 +84,8 @@
               <ion-col class="detail">
                   <ion-card-header>
                     <ion-card-title>
-                      <div style="font-size:2.1rem;">{{ formDataList[0]!.name }}</div>
-                      <div class="money">{{ formDataList[0]!.unit }}, {{ formDataList[0]!.date }}</div>
+                      <div style="font-size:2.1rem;">{{ formDataList[0]?.name }}</div>
+                      <div class="money">{{ formDataList[0]?.unit }}, {{ formDataList[0]?.date }}</div>
                     </ion-card-title>
                   </ion-card-header> 
                </ion-col>

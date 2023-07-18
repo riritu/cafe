@@ -28,6 +28,7 @@ export class LoginPage implements OnInit {
   async login() {
     const storedFormData = localStorage.getItem('tenants');
     if (this.username === 'admin' && this.password === 'password') {
+      localStorage.clear();
       this.navCtrl.navigateForward('/route/dahboard');
     }
     else if (storedFormData) {
